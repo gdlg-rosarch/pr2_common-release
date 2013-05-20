@@ -1,0 +1,12 @@
+Source: ros-hydro-pr2-msgs
+Section: misc
+Priority: extra
+Maintainer: Austin Hendrix <ahendrix@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-geometry-msgs, ros-hydro-message-generation, ros-hydro-std-msgs
+Homepage: http://ros.org/wiki/pr2_msgs
+Standards-Version: 3.9.2
+
+Package: ros-hydro-pr2-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-geometry-msgs, ros-hydro-message-runtime, ros-hydro-std-msgs
+Description: Messages for representing PR2 state, such as battery information and the PR2 fingertip sensors.
