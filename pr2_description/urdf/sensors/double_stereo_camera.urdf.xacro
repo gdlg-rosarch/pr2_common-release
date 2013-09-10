@@ -5,8 +5,8 @@
        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
        xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <include filename="$(find pr2_description)/urdf/sensors/double_stereo_camera.gazebo.xacro" />
-  <include filename="$(find pr2_description)/urdf/sensors/stereo_camera.urdf.xacro" />
+  <xacro:include filename="$(find pr2_description)/urdf/sensors/double_stereo_camera.gazebo.xacro" />
+  <xacro:include filename="$(find pr2_description)/urdf/sensors/stereo_camera.urdf.xacro" />
 
   <property name="stereo_size_x" value="0.02" />
   <property name="stereo_size_y" value="0.12" />
@@ -46,10 +46,10 @@
 
     <!-- Wide camera is on robot right (hca1), narrow on left (hca2)? -->
     <!-- 15mm offset from center needs check with CAD -->
-    <xacro:stereo_camera_v0 parent="${name}_link" name="wide_stereo" focal_length="320" hfov="90" image_format="BAYER_BGGR8" image_width="640" image_height="480" >
+    <xacro:stereo_camera_v0 parent="${name}_link" name="wide_stereo" focal_length="320.000105" hfov="90" image_format="BAYER_BGGR8" image_width="640" image_height="480" >
       <origin xyz="0.045 ${0.045-0.015} 0.0501" rpy="0.0   0.0   0.0" />
     </xacro:stereo_camera_v0>
-    <xacro:stereo_camera_v0 parent="${name}_link" name="narrow_stereo" focal_length="772.55" hfov="45" image_format="L8" image_width="640" image_height="480" >
+    <xacro:stereo_camera_v0 parent="${name}_link" name="narrow_stereo" focal_length="772.548518" hfov="45" image_format="L8" image_width="640" image_height="480" >
       <origin xyz="0.045 ${0.045+0.015} 0.0501" rpy="0.0   0.0   0.0" />
     </xacro:stereo_camera_v0>
 
