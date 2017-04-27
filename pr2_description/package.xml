@@ -1,11 +1,11 @@
 <package>
   <name>pr2_description</name>
-  <version>1.11.4</version>
+  <version>1.12.0</version>
   <description>This package contains the description (mechanical, kinematic, visual,
   etc.) of the PR2 robot.  The files in this package are parsed and used by
   a variety of other components.  Most users will not interact directly
   with this package.</description>
-  <maintainer email="ahendrix@willowgarage.com">Austin Hendrix</maintainer>
+  <maintainer email="dash@clearpathrobotics.com">Devon Ash</maintainer>
 
   <license>BSD</license>
 
@@ -24,5 +24,6 @@
   <run_depend>xacro</run_depend>
 
   <test_depend>gtest</test_depend>
-  <test_depend>urdfdom</test_depend>
+  <test_depend>liburdfdom-dev</test_depend>
+  <!-- <test_depend>urdfdom</test_depend> As of Indigo this is a system deb at liburdfdom-dev -->
 </package>
